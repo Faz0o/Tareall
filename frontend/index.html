@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Videojuegos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="lateral-image left">
+        <img src="imagenes/e16e3ba802587f4cd71ddefb01d3e64d (1).jpg" alt="Lateral Image Left">
+    </div>
+
+    <div class="lateral-image right">
+        <img src="imagenes/e16e3ba802587f4cd71ddefb01d3e64d (1).jpg" alt="Lateral Image Right">
+    </div>
+
+    <div class="container">
+        <h1>Registro de Videojuegos</h1>
+        <form id="registerForm">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="description">Descripción:</label>
+            <textarea id="description" name="description" required></textarea>
+            <label for="duration">Duración (horas):</label>
+            <input type="number" id="duration" name="duration" required min="1">
+            <label for="developers">Desarrolladores:</label>
+            <input type="text" id="developers" name="developers" required>
+            <button type="submit">Registrar Juego</button>
+        </form>
+    </div>
+
+    <div class="container small">
+        <h2>Operaciones de Juegos</h2>
+        <label for="UserId">ID de Juego:</label>
+        <input type="number" id="userId" name="userId" required min="1">
+        <button onclick="getUser()">Obtener Juego</button>
+        <button onclick="updateUser()">Actualizar Juego</button>
+        <button onclick="deleteUser()">Eliminar Juego</button>
+    </div>
+
+    <div id="notification"></div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Registro de Videojuegos</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

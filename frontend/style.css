@@ -1,0 +1,155 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative; /* Establecer posición relativa para contener imágenes laterales */
+}
+
+.lateral-image {
+    position: fixed; /* Cambiado a posición fija para mantenerlas en el borde */
+    top: 0;
+    width: 900px; /* Ancho de las imágenes laterales */
+    z-index: -1; /* Para enviarlas al fondo */
+}
+
+.lateral-image.left {
+    left: 0;
+}
+
+.lateral-image.right {
+    right: 0;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto; /* Ajustado para centrar los contenedores */
+    position: relative; /* Añadido para establecer el contexto de posición */
+    z-index: 1; /* Asegura que el contenido esté sobre las imágenes laterales */
+}
+
+h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+form, .container > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+input[type="text"], input[type="number"], textarea {
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    margin: 5px 0;
+    width: calc(100% - 20px); /* Ajustar el ancho para mantenerse dentro de los márgenes */
+    font-size: 14px;
+    box-sizing: border-box;   /* Asegura que el padding se incluya en el ancho total */
+}
+
+textarea {
+    height: 100px;            /* Fija la altura del textarea */
+    resize: none;             /* Evita el redimensionamiento del textarea */
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #b300ff;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #b300ff;
+}
+
+.container.small {
+    max-width: 500px; /* Reducir el ancho del contenedor derecho */
+}
+
+.container.small input[type="number"] {
+    width: calc(100% - 20px); /* Ajustar el ancho del input de número */
+}
+
+#gameList {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.game-item {
+    background-color: rgba(244, 12, 12, 0.2);
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.notification {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.success {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.error {
+    background-color: #f44336;
+    color: white;
+}
+
+/* Ajustes específicos para las imágenes laterales */
+
+.lateral-image img {
+    width: 100%; /* Ajustar el ancho al 100% del contenedor */
+    height: auto; /* Ajustar la altura automáticamente */
+    max-height: 100vh; /* Establecer altura máxima al 100% del viewport */
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+footer {
+    background-color: #000000;
+    padding: 1px 0;
+    text-align: center;
+    width: 100%;
+    color: #fff;
+}
